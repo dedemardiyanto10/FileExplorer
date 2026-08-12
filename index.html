@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileExplorer - Advanced Android File Manager</title>
+    <!-- Google Fonts: Plus Jakarta Sans (Gaya Material 3 Modern) -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Material Symbols Outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <style>
+        :root {
+            --md-sys-color-primary: #0061a4;
+            --md-sys-color-on-primary: #ffffff;
+            --md-sys-color-primary-container: #d1e4ff;
+            --md-sys-color-on-primary-container: #001d36;
+            --md-sys-color-surface: #fdfcff;
+            --md-sys-color-on-surface: #1a1c1e;
+            --md-sys-color-surface-container: #f0f4f8;
+            --md-sys-color-surface-container-high: #e2e8ee;
+            --md-sys-color-outline: #72777f;
+            --md-sys-color-outline-variant: #c2c7cf;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --md-sys-color-primary: #9ecaff;
+                --md-sys-color-on-primary: #00325b;
+                --md-sys-color-primary-container: #004a7d;
+                --md-sys-color-on-primary-container: #d1e4ff;
+                --md-sys-color-surface: #121316;
+                --md-sys-color-on-surface: #e2e2e6;
+                --md-sys-color-surface-container: #1e2024;
+                --md-sys-color-surface-container-high: #282a2e;
+                --md-sys-color-outline: #8c9199;
+                --md-sys-color-outline-variant: #42474e;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--md-sys-color-surface);
+            color: var(--md-sys-color-on-surface);
+            line-height: 1.6;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* Header / App Info Card */
+        .hero-card {
+            background-color: var(--md-sys-color-surface-container);
+            border-radius: 28px;
+            padding: 32px 24px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            border: 1px solid var(--md-sys-color-outline-variant);
+        }
+
+        .app-icon {
+            width: 88px;
+            height: 88px;
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .app-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .app-version {
+            display: inline-block;
+            background-color: var(--md-sys-color-primary-container);
+            color: var(--md-sys-color-on-primary-container);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 8px;
+        }
+
+        .app-desc {
+            font-size: 15px;
+            color: var(--md-sys-color-outline);
+            max-width: 440px;
+        }
+
+        /* Download Button (MD3 Filled Button) */
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--md-sys-color-primary);
+            color: var(--md-sys-color-on-primary);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 100px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            max-width: 320px;
+            margin-top: 8px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Features Section */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 8px;
+            padding-left: 4px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .feature-card {
+            background-color: var(--md-sys-color-surface-container);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            border: 1px solid var(--md-sys-color-outline-variant);
+        }
+
+        .feature-icon-box {
+            background-color: var(--md-sys-color-surface-container-high);
+            color: var(--md-sys-color-primary);
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-content h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--md-sys-color-on-surface);
+        }
+
+        .feature-content p {
+            font-size: 13px;
+            color: var(--md-sys-color-outline);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 13px;
+            color: var(--md-sys-color-outline);
+            margin-top: 24px;
+            padding-bottom: 12px;
+        }
+
+        footer a {
+            color: var(--md-sys-color-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Card -->
+        <div class="hero-card">
+            <div class="app-icon">
+                <span class="material-symbols-outlined" style="font-size: 44px;">folder_open</span>
+            </div>
+            <div>
+                <h1 class="app-title">FileExplorer</h1>
+                <span class="app-version">v1.0.0 Stable</span>
+            </div>
+            <p class="app-desc">
+                Aplikasi manajemen file Android modern dengan analitik penyimpanan mendalam, ekstraksi arsip lengkap, dan antarmuka Material Design 3 Expressive.
+            </p>
+            
+            <!-- Tombol Download (Arahkan ke link Github Releases APK kamu) -->
+            <a href="https://github.com/dedemardiyanto10/FileExplorer/releases/download/V1.0.0/app-releasev1.0.0.apk" class="download-btn">
+                <span class="material-symbols-outlined">download</span>
+                Download APK (Release)
+            </a>
+        </div>
+
+        <!-- Features List -->
+        <h2 class="section-title">Fitur Unggulan</h2>
+        <div class="features-grid">
+            
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <span class="material-symbols-outlined">donut_large</span>
+                </div>
+                <div class="feature-content">
+                    <h3>Storage Analyzer</h3>
+                    <p>Analisis penyimpanan internal secara real-time berdasarkan kategori Media, Dokumen, APK, dan Arsip.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <span class="material-symbols-outlined">palette</span>
+                </div>
+                <div class="feature-content">
+                    <h3>Material 3 Expressive UI</h3>
+                    <p>Antarmuka dinamis dengan sudut melengkung halus yang otomatis menyesuaikan mode terang dan gelap perangkat.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <span class="material-symbols-outlined">folder_zip</span>
+                </div>
+                <div class="feature-content">
+                    <h3>Archive Extractor</h3>
+                    <p>Dukungan penuh untuk mengekstrak file ZIP, RAR, 7Z, TAR, dan GZ langsung di dalam aplikasi.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon-box">
+                    <span class="material-symbols-outlined">bolt</span>
+                </div>
+                <div class="feature-content">
+                    <h3>Performa Tinggi</h3>
+                    <p>Dilengkapi sistem <i>thumbnail caching</i> optimal via Glide dan pemutaran media menggunakan ExoPlayer.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            Built with ❤️ by <a href="https://github.com/dedemardiyanto10" target="_blank">Dede Mardiyanto</a><br>
+            Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+        </footer>
+    </div>
+
+</body>
+</html>

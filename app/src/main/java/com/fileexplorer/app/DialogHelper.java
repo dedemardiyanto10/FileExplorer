@@ -455,7 +455,7 @@ public class DialogHelper {
                         v -> {
                             binding.layoutProgress.setVisibility(View.VISIBLE);
                             binding.tvDeleteSub.setText("Menghapus...");
-                            binding.tvDeleteMessage.setText(selectedFiles.size());
+                            binding.tvDeleteMessage.setText("Memproses penghapusan...");
 
                             dialogRef[0].getButton(AlertDialog.BUTTON_POSITIVE).setEnabled(false);
                             dialogRef[0].getButton(AlertDialog.BUTTON_NEGATIVE).setEnabled(false);

@@ -1,0 +1,29 @@
+-keep class j$.time.DateTimeException {
+}
+-keep class j$.time.Instant {
+  public long getEpochSecond();
+  public int getNano();
+  public static j$.time.Instant now();
+  public static j$.time.Instant ofEpochMilli(long);
+  public static j$.time.Instant ofEpochSecond(long, long);
+  j$.time.Instant EPOCH;
+}
+-keep class j$.time.LocalDateTime {
+  public int getDayOfMonth();
+  public int getHour();
+  public int getMinute();
+  public int getMonthValue();
+  public int getSecond();
+  public int getYear();
+  public static j$.time.LocalDateTime ofInstant(j$.time.Instant, j$.time.ZoneId);
+}
+-keep class j$.time.TimeConversions {
+  public static java.time.Instant convert(j$.time.Instant);
+  public static j$.time.Instant convert(java.time.Instant);
+}
+-keep class j$.time.ZoneId {
+  public static j$.time.ZoneId systemDefault();
+}
+-keep class j$.util.DesugarTimeZone {
+  public static java.util.TimeZone getTimeZone(java.lang.String);
+}

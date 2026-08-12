@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="?attr/colorSurfaceContainerLow"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        app:liftOnScroll="false"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            app:title="Analisis Penyimpanan"
+            app:titleTextColor="?attr/colorOnSurface"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            android:id="@+id/topAppBar">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="4dp"
+                app:strokeColor="@android:color/transparent"
+                android:layout_marginHorizontal="8dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="?attr/colorSurfaceContainerLowest"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:text="Penyimpanan Internal" />
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:textSize="20sp"
+                        android:textColor="?attr/colorOnSurface"
+                        android:layout_marginTop="4dp"
+                        android:id="@+id/tvStorageSummary"
+                        android:text="Memuat..."
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:layout_height="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="16dp"
+                        android:max="100"
+                        android:indeterminate="false"
+                        app:trackColor="?attr/colorSurfaceVariant"
+                        app:trackCornerRadius="24dp"
+                        style="@style/Widget.Material3Expressive.LinearProgressIndicator.Wavy"
+                        android:progress="0"
+                        app:trackThickness="12dp"
+                        app:indicatorColor="?attr/colorPrimary"
+                        android:id="@+id/progressStorageMain" />
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="12sp"
+                                android:textColor="?attr/colorOnSurfaceVariant"
+                                android:text="Digunakan" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="16sp"
+                                android:textColor="?attr/colorOnSurface"
+                                android:id="@+id/tvUsedStorage"
+                                android:text="0 GB"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="12sp"
+                                android:textColor="?attr/colorOnSurfaceVariant"
+                                android:text="Tersedia (Sisa)" />
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:textSize="16sp"
+                                android:textColor="?attr/colorPrimary"
+                                android:id="@+id/tvFreeStorage"
+                                android:text="0 GB"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/bg_top_container"
+                android:layout_marginHorizontal="8dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:text="Kategori File"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/item_storage_category"
+                android:id="@+id/layoutImages" />
+
+            <include
+                layout="@layout/item_storage_category"
+                android:id="@+id/layoutVideos" />
+
+            <include
+                layout="@layout/item_storage_category"
+                android:id="@+id/layoutAudio" />
+
+            <include
+                layout="@layout/item_storage_category"
+                android:id="@+id/layoutDocuments" />
+
+            <include
+                layout="@layout/item_storage_category"
+                android:id="@+id/layoutApk" />
+
+            <include
+                layout="@layout/item_storage_category"
+                android:id="@+id/layoutArchives" />
+
+            <include
+                layout="@layout/item_storage_category"
+                android:id="@+id/layoutOthers" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/bg_bottom_container"
+                android:layout_marginHorizontal="8dp"
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_marginTop="1dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:text="Catatan:\nKalkulasi ini berfokus pada file media dan dokumen pengguna." />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

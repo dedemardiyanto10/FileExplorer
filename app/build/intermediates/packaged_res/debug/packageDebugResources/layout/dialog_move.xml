@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:paddingTop="24dp"
+     android:paddingHorizontal="24dp">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:textSize="16sp"
+         android:textAllCaps="true"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:letterSpacing="0.08"
+         android:textStyle="bold"
+         android:id="@+id/tvTitle"
+         android:text="Pindahkan File" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:textSize="13sp"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:layout_marginTop="4dp"
+         android:id="@+id/tvSubtitle"
+         android:text="Pilih folder tujuan" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="12dp"
+         android:ellipsize="middle"
+         android:textSize="13sp"
+         android:singleLine="true"
+         android:textColor="?attr/colorPrimary"
+         android:id="@+id/tvCurrentPath"
+         android:text="/storage/emulated/0" />
+
+    <View
+         android:layout_height="1dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="12dp"
+         android:background="?attr/colorSurfaceVariant" />
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:maxHeight="300dp"
+         android:nestedScrollingEnabled="false"
+         android:id="@+id/rvFolders" />
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_category.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_category.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_folder_move.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_folder_move.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_rename.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_rename.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_spinner.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_spinner.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/activity_storage_analyzer.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/activity_storage_analyzer.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_create_folder.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_create_folder.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_sort_menu.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_sort_menu.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_more_menu.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_more_menu.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_move.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_move.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_file_grid.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_file_grid.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_delete_confirmation.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_delete_confirmation.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_exit_confirmation.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_exit_confirmation.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_compress.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_compress.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_batch_rename.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_batch_rename.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_storage_category.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_storage_category.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_audio_player.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_audio_player.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_archive_file.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_archive_file.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_footer.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_footer.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/activity_settings.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_file_grid3.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_file_grid3.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/item_file_list.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/item_file_list.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/dialog_properties.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/dialog_properties.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeReleaseResources-39:/layout/activity_main.xml",
+        "source": "com.fileexplorer.app-main-41:/layout/activity_main.xml"
+    }
+]

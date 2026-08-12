@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="animation_types_array">
+        <item>Fade In</item>
+        <item>Fade In Down</item>
+        <item>Fade In Up</item>
+        <item>Fade In Left</item>
+        <item>Fade In Right</item>
+        <item>Slide In Down</item>
+        <item>Slide In Up</item>
+        <item>Slide In Left</item>
+        <item>Slide In Right</item>
+        <item>Scale In</item>
+        <item>Scale In Top</item>
+        <item>Scale In Bottom</item>
+        <item>Scale In Left</item>
+        <item>Scale In Right</item>
+        <item>Landing</item>
+        <item>Overshoot Left</item>
+        <item>Overshoot Right</item>
+    </string-array>
+</resources>

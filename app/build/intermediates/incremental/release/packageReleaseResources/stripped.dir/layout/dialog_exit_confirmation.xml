@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:paddingTop="24dp"
+     android:paddingHorizontal="24dp">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:textSize="16sp"
+         android:textAllCaps="true"
+         android:textColor="?attr/colorOnSurface"
+         android:letterSpacing="0.08"
+         android:textStyle="bold"
+         android:layout_marginBottom="16dp"
+         android:id="@+id/tvHeader"
+         android:text="Konfirmasi Keluar" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:textSize="14sp"
+         android:textColor="?attr/colorOnSurface"
+         android:id="@+id/tvMessage"
+         android:text="Apakah Anda yakin ingin keluar dari aplikasi?" />
+
+</LinearLayout>

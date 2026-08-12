@@ -1,0 +1,102 @@
+[
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_delete_confirmation.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_delete_confirmation.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_create_folder.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_create_folder.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_folder_move.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_folder_move.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_footer.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_footer.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_file_grid.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_file_grid.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_sort_menu.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_sort_menu.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_more_menu.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_more_menu.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_file_list.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_file_list.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_settings_menu.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_settings_menu.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_rename.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_rename.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_move.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_move.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_file_grid3.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_file_grid3.xml"
+    },
+    {
+        "merged": "com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_delete_confirmation.xml",
+        "source": "com.fileexplorer.app-main-42:/layout/dialog_delete_confirmation.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_compress.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_compress.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/activity_storage_analyzer.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/activity_storage_analyzer.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/activity_settings.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/activity_main.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_archive_file.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_archive_file.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_category.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_category.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_spinner.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_spinner.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_exit_confirmation.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_exit_confirmation.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_audio_player.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_audio_player.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/item_storage_category.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/item_storage_category.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_batch_rename.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_batch_rename.xml"
+    },
+    {
+        "merged": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-mergeDebugResources-39:/layout/dialog_properties.xml",
+        "source": "/data/user/0/com.tom.rv2ide/files/home/.gradle/daemon/9.0.0/com.fileexplorer.app-main-42:/layout/dialog_properties.xml"
+    }
+]

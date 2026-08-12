@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:paddingTop="24dp"
+     android:paddingHorizontal="24dp">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:textSize="16sp"
+         android:textAllCaps="true"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:letterSpacing="0.08"
+         android:textStyle="bold"
+         android:id="@+id/tvHeader"
+         android:text="Buat Folder Baru" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:textSize="13sp"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:layout_marginTop="4dp"
+         android:text="Masukkan nama untuk folder baru di direktori ini" />
+
+    <com.google.android.material.textfield.TextInputLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         app:boxCornerRadiusTopEnd="32dp"
+         android:hint="Nama Folder"
+         app:boxCornerRadiusBottomStart="32dp"
+         app:boxCornerRadiusBottomEnd="32dp"
+         app:startIconTint="?attr/colorPrimary"
+         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+         app:startIconDrawable="@drawable/ic_folder_plus"
+         app:boxCornerRadiusTopStart="32dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:singleLine="true"
+             android:maxLines="1"
+             android:id="@+id/inputFolderName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

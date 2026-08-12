@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:paddingHorizontal="24dp"
+     android:paddingTop="24dp">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:textSize="16sp"
+         android:textAllCaps="true"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:letterSpacing="0.08"
+         android:textStyle="bold"
+         android:id="@+id/tvHeader"
+         android:text="Informasi File" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:textSize="13sp"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:layout_marginTop="4dp"
+         android:text="Detail lengkap mengenai file atau folder" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:orientation="vertical">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:textSize="11sp"
+             android:textAllCaps="true"
+             android:textColor="?attr/colorPrimary"
+             android:textStyle="bold"
+             android:text="Nama File" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:textSize="14sp"
+             android:textColor="?attr/colorOnSurface"
+             android:layout_marginTop="2dp"
+             android:id="@+id/tvPropName"
+             android:text="-" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:textSize="11sp"
+             android:textAllCaps="true"
+             android:textColor="?attr/colorPrimary"
+             android:textStyle="bold"
+             android:text="Lokasi" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:textSize="14sp"
+             android:textColor="?attr/colorOnSurface"
+             android:layout_marginTop="2dp"
+             android:id="@+id/tvPropPath"
+             android:text="-" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:orientation="horizontal">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="11sp"
+                     android:textAllCaps="true"
+                     android:textColor="?attr/colorPrimary"
+                     android:textStyle="bold"
+                     android:text="Tipe" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="14sp"
+                     android:textColor="?attr/colorOnSurface"
+                     android:layout_marginTop="2dp"
+                     android:id="@+id/tvPropType"
+                     android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="11sp"
+                     android:textAllCaps="true"
+                     android:textColor="?attr/colorPrimary"
+                     android:textStyle="bold"
+                     android:text="Ukuran" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="14sp"
+                     android:textColor="?attr/colorOnSurface"
+                     android:layout_marginTop="2dp"
+                     android:id="@+id/tvPropSize"
+                     android:text="-" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:visibility="gone"
+             android:orientation="horizontal"
+             android:id="@+id/layoutMediaMeta">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="11sp"
+                     android:textAllCaps="true"
+                     android:textColor="?attr/colorPrimary"
+                     android:textStyle="bold"
+                     android:text="Resolusi" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="14sp"
+                     android:textColor="?attr/colorOnSurface"
+                     android:layout_marginTop="2dp"
+                     android:id="@+id/tvPropResolution"
+                     android:text="-" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="11sp"
+                     android:textAllCaps="true"
+                     android:textColor="?attr/colorPrimary"
+                     android:textStyle="bold"
+                     android:text="Durasi" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="14sp"
+                     android:textColor="?attr/colorOnSurface"
+                     android:layout_marginTop="2dp"
+                     android:id="@+id/tvPropDuration"
+                     android:text="-" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="12dp"
+             android:orientation="horizontal">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="11sp"
+                     android:textAllCaps="true"
+                     android:textColor="?attr/colorPrimary"
+                     android:textStyle="bold"
+                     android:text="Izin (Permissions)" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="14sp"
+                     android:textColor="?attr/colorOnSurface"
+                     android:layout_marginTop="2dp"
+                     android:id="@+id/tvPropPermissions"
+                     android:text="R / W / X" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:orientation="vertical"
+                 android:layout_weight="1">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="11sp"
+                     android:textAllCaps="true"
+                     android:textColor="?attr/colorPrimary"
+                     android:textStyle="bold"
+                     android:text="Terakhir Diubah" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:textSize="14sp"
+                     android:textColor="?attr/colorOnSurface"
+                     android:layout_marginTop="2dp"
+                     android:id="@+id/tvPropDate"
+                     android:text="-" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:id="@+id/layoutChecksum">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="11sp"
+                 android:textAllCaps="true"
+                 android:textColor="?attr/colorPrimary"
+                 android:textStyle="bold"
+                 android:text="MD5" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="8dp"
+                 android:textSize="12sp"
+                 android:fontFamily="monospace"
+                 android:textColor="?attr/colorOnSurface"
+                 android:layout_marginTop="2dp"
+                 android:id="@+id/tvPropMd5"
+                 android:text="-" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="11sp"
+                 android:textAllCaps="true"
+                 android:textColor="?attr/colorPrimary"
+                 android:textStyle="bold"
+                 android:text="SHA-1" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:layout_marginBottom="8dp"
+                 android:textSize="12sp"
+                 android:fontFamily="monospace"
+                 android:textColor="?attr/colorOnSurface"
+                 android:layout_marginTop="2dp"
+                 android:id="@+id/tvPropSha1"
+                 android:text="-" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="11sp"
+                 android:textAllCaps="true"
+                 android:textColor="?attr/colorPrimary"
+                 android:textStyle="bold"
+                 android:text="SHA-256" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="12sp"
+                 android:fontFamily="monospace"
+                 android:textColor="?attr/colorOnSurface"
+                 android:layout_marginTop="2dp"
+                 android:id="@+id/tvPropSha256"
+                 android:text="-" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

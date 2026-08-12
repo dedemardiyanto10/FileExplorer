@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_margin="16dp"
+     app:cardElevation="0dp"
+     app:strokeWidth="0dp"
+     app:cardBackgroundColor="?attr/colorSurfaceContainerLow"
+     app:cardCornerRadius="24dp">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center"
+         android:padding="24dp"
+         android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp"
+             android:adjustViewBounds="true"
+             android:scaleType="fitCenter"
+             android:src="@drawable/ic_audio"
+             app:shapeAppearanceOverlay="?@attr/shapeAppearanceCornerLarge"
+             android:id="@+id/ivAudioCover" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="16dp"
+             android:gravity="center"
+             android:textAppearance="?attr/textAppearanceTitleMedium"
+             android:ellipsize="middle"
+             android:textColor="?attr/colorOnSurface"
+             android:maxLines="1"
+             android:id="@+id/tvAudioTitle"
+             android:text="Nama Audio.mp3" />
+
+        <SeekBar
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="4dp"
+             android:id="@+id/audioSeekBar" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="24dp"
+             android:orientation="horizontal">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:textAppearance="?attr/textAppearanceBodySmall"
+                 android:textColor="?attr/colorOnSurfaceVariant"
+                 android:layout_weight="1"
+                 android:id="@+id/tvCurrentTime"
+                 android:text="00:00" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textAppearance="?attr/textAppearanceBodySmall"
+                 android:textColor="?attr/colorOnSurfaceVariant"
+                 android:id="@+id/tvTotalDuration"
+                 android:text="00:00" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:gravity="center"
+             android:orientation="horizontal"
+             android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 app:icon="@drawable/ic_replay_10"
+                 app:iconSize="32dp"
+                 app:iconTint="?attr/colorOnSurfaceVariant"
+                 style="@style/Widget.Material3.Button.IconButton"
+                 android:id="@+id/iv_prev" />
+
+            <com.google.android.material.button.MaterialButton
+                 android:layout_height="72dp"
+                 android:layout_width="72dp"
+                 app:iconSize="36dp"
+                 app:backgroundTint="?attr/colorPrimary"
+                 android:padding="0dp"
+                 app:iconTint="?attr/colorOnPrimary"
+                 app:icon="@drawable/ic_play"
+                 android:insetRight="0dp"
+                 android:layout_marginHorizontal="24dp"
+                 app:shapeAppearanceOverlay="?@attr/shapeAppearanceCornerExtraExtraLarge"
+                 android:insetTop="0dp"
+                 android:insetBottom="0dp"
+                 style="?attr/materialIconButtonFilledStyle"
+                 android:id="@+id/ivPlayPause"
+                 android:insetLeft="0dp"
+                 app:iconGravity="textStart" />
+
+            <com.google.android.material.button.MaterialButton
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 app:icon="@drawable/ic_forward_10"
+                 app:iconSize="32dp"
+                 app:iconTint="?attr/colorOnSurfaceVariant"
+                 style="@style/Widget.Material3.Button.IconButton"
+                 android:id="@+id/iv_next" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

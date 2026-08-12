@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:paddingTop="24dp"
+     android:paddingHorizontal="24dp">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:textSize="16sp"
+         android:textAllCaps="true"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:letterSpacing="0.08"
+         android:id="@+id/tvDialogTitle"
+         android:text="Kompresi File"
+         android:textStyle="bold" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         android:textSize="13sp"
+         android:singleLine="false"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:layout_marginTop="4dp"
+         android:id="@+id/tvDialogSubtitle"
+         android:text="file.zip" />
+
+    <View
+         android:layout_height="1dp"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="12dp"
+         android:visibility="gone"
+         android:background="?attr/colorSurfaceVariant"
+         android:id="@+id/dividerFileName" />
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="12dp"
+         android:visibility="gone"
+         android:maxHeight="200dp"
+         android:nestedScrollingEnabled="false"
+         android:id="@+id/rvFileList" />
+
+    <com.google.android.material.textfield.TextInputLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="16dp"
+         app:boxCornerRadiusTopEnd="32dp"
+         app:endIconMode="clear_text"
+         android:hint="Nama file zip"
+         app:boxCornerRadiusBottomStart="32dp"
+         app:boxCornerRadiusBottomEnd="32dp"
+         app:startIconTint="?attr/colorPrimary"
+         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+         app:startIconDrawable="@drawable/ic_compress"
+         app:boxCornerRadiusTopStart="32dp"
+         android:id="@+id/tilZipName">
+
+        <com.google.android.material.textfield.TextInputEditText
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:singleLine="true"
+             android:inputType="text"
+             android:id="@+id/etZipName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="12dp"
+         android:visibility="gone"
+         android:textSize="12sp"
+         android:textColor="?attr/colorOnSurfaceVariant"
+         android:id="@+id/tvFormatInfo"
+         android:text="Format ZIP (otomatis)" />
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:visibility="gone"
+         android:orientation="vertical"
+         android:layout_marginTop="8dp"
+         android:id="@+id/layoutProgress">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="8dp"
+             android:textSize="14sp"
+             android:textColor="?attr/colorOnSurface"
+             android:id="@+id/tvProgressStatus"
+             android:text="Mengompresi..." />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+             android:layout_height="4dp"
+             android:layout_width="match_parent"
+             android:max="100"
+             android:indeterminate="false"
+             app:trackColor="?attr/colorSurfaceVariant"
+             style="@style/Widget.Material3Expressive.LinearProgressIndicator.Wavy"
+             android:progress="0"
+             android:id="@+id/progressCompress"
+             app:indicatorColor="?attr/colorPrimary" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:gravity="end"
+             android:orientation="horizontal"
+             android:layout_marginTop="4dp">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:textSize="12sp"
+                 android:textColor="?attr/colorOnSurfaceVariant"
+                 android:id="@+id/tvProgressPercent"
+                 android:text="0%" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">File Explorer</string>
+    <string name="permission_denied">Izin penyimpanan ditolak</string>
+    <string name="sort_name">Nama</string>
+    <string name="sort_date">Tanggal diubah</string>
+    <string name="sort_size">Ukuran</string>
+    <string name="select_all">Pilih Semua</string>
+    <string name="deselect_all">Batalkan Semua</string>
+    <string name="items_selected">%1$d dipilih</string>
+    <string name="error_loading_files">Gagal memuat file</string>
+
+    <!-- Tambahan untuk settings -->
+    <string name="settings">Pengaturan</string>
+    <string name="theme">Tema</string>
+    <string name="light">Terang</string>
+    <string name="dark">Gelap</string>
+    <string name="system">Sistem</string>
+    <string name="amoled_mode">Mode AMOLED</string>
+    <string name="show_hidden_files">Tampilkan file tersembunyi</string>
+    <string name="ignore_nomedia">Abaikan file .nomedia</string>
+    <string name="recyclerview_animation">Animasi RecyclerView</string>
+    <string name="animation_type">Jenis Animasi</string>
+    <string name="show_breadcrumb">Tampilkan Breadcrumb</string>
+    <string name="delete">Hapus</string>
+    <string name="rename">Ubah nama</string>
+    <string name="copy">Salin</string>
+    <string name="move">Pindahkan</string>
+    <string name="share">Bagikan</string>
+    <string name="properties">Properti</string>
+    <string name="create_folder">Buat folder</string>
+    <string name="folder_name">Nama folder</string>
+    <string name="cancel">Batal</string>
+    <string name="ok">OK</string>
+    <string name="empty_folder">Folder kosong</string>
+    <string name="loading">Memuat...</string>
+    <string name="no_files">Tidak ada file</string>
+    <string name="file_size">Ukuran file</string>
+    <string name="modified">Dimodifikasi</string>
+    <string name="location">Lokasi</string>
+</resources>

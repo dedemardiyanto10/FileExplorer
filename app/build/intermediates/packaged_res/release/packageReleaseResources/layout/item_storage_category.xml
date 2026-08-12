@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_marginVertical="1dp"
+     app:strokeColor="?attr/colorSurfaceVariant"
+     android:layout_marginHorizontal="8dp"
+     app:cardElevation="0dp"
+     app:strokeWidth="0dp"
+     app:cardBackgroundColor="?attr/colorSurfaceContainerLowest"
+     app:cardCornerRadius="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:padding="16dp">
+
+        <FrameLayout
+             android:layout_height="44dp"
+             android:layout_width="44dp"
+             android:background="@drawable/bg_icon_container"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintBottom_toTopOf="@id/progressCategory"
+             android:id="@+id/iconContainer">
+
+            <ImageView
+                 android:layout_height="22dp"
+                 android:layout_width="22dp"
+                 android:contentDescription="@null"
+                 android:src="@drawable/ic_image"
+                 app:tint="?attr/colorPrimary"
+                 android:id="@+id/ivCategoryIcon"
+                 android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:layout_marginEnd="8dp"
+             android:ellipsize="end"
+             android:textSize="15sp"
+             android:textColor="?attr/colorOnSurface"
+             app:layout_constraintEnd_toStartOf="@id/tvCategorySize"
+             app:layout_constraintStart_toEndOf="@id/iconContainer"
+             android:layout_marginStart="14dp"
+             app:layout_constraintTop_toTopOf="@id/iconContainer"
+             android:maxLines="1"
+             android:id="@+id/tvCategoryName"
+             android:text="Gambar"
+             android:textStyle="bold" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:layout_marginEnd="8dp"
+             android:textSize="12sp"
+             android:textColor="?attr/colorOnSurfaceVariant"
+             app:layout_constraintEnd_toStartOf="@id/tvCategorySize"
+             app:layout_constraintStart_toEndOf="@id/iconContainer"
+             app:layout_constraintBottom_toBottomOf="@id/iconContainer"
+             android:layout_marginStart="14dp"
+             android:id="@+id/tvCategoryDesc"
+             android:text="File media penyimpanan" />
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             app:layout_constraintTop_toTopOf="@id/iconContainer"
+             android:textSize="14sp"
+             android:textColor="?attr/colorOnSurface"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:id="@+id/tvCategorySize"
+             android:text="0 MB"
+             android:textStyle="bold" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+             android:layout_height="wrap_content"
+             android:layout_width="0dp"
+             android:max="100"
+             android:indeterminate="false"
+             app:trackCornerRadius="4dp"
+             android:layout_marginTop="16dp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/iconContainer"
+             app:layout_constraintStart_toStartOf="parent"
+             app:trackColor="?attr/colorSurfaceVariant"
+             app:layout_constraintEnd_toEndOf="parent"
+             style="@style/Widget.Material3Expressive.LinearProgressIndicator.Wavy"
+             android:progress="0"
+             app:trackThickness="8dp"
+             android:id="@+id/progressCategory"
+             app:indicatorColor="?attr/colorPrimary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

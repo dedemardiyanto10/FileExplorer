@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="animation_types_array">
+        <item>Fade In</item>
+        <item>Fade In Down</item>
+        <item>Fade In Up</item>
+        <item>Fade In Left</item>
+        <item>Fade In Right</item>
+        <item>Slide In Down</item>
+        <item>Slide In Up</item>
+        <item>Slide In Left</item>
+        <item>Slide In Right</item>
+        <item>Scale In</item>
+        <item>Scale In Top</item>
+        <item>Scale In Bottom</item>
+        <item>Scale In Left</item>
+        <item>Scale In Right</item>
+        <item>Landing</item>
+        <item>Overshoot Left</item>
+        <item>Overshoot Right</item>
+    </string-array>
+    <string name="amoled_mode">Mode AMOLED</string>
+    <string name="animation_type">Jenis Animasi</string>
+    <string name="app_name">File Explorer</string>
+    <string name="cancel">Batal</string>
+    <string name="copy">Salin</string>
+    <string name="create_folder">Buat folder</string>
+    <string name="dark">Gelap</string>
+    <string name="delete">Hapus</string>
+    <string name="deselect_all">Batalkan Semua</string>
+    <string name="empty_folder">Folder kosong</string>
+    <string name="error_loading_files">Gagal memuat file</string>
+    <string name="file_size">Ukuran file</string>
+    <string name="folder_name">Nama folder</string>
+    <string name="ignore_nomedia">Abaikan file .nomedia</string>
+    <string name="items_selected">%1$d dipilih</string>
+    <string name="light">Terang</string>
+    <string name="loading">Memuat...</string>
+    <string name="location">Lokasi</string>
+    <string name="modified">Dimodifikasi</string>
+    <string name="move">Pindahkan</string>
+    <string name="no_files">Tidak ada file</string>
+    <string name="ok">OK</string>
+    <string name="permission_denied">Izin penyimpanan ditolak</string>
+    <string name="properties">Properti</string>
+    <string name="recyclerview_animation">Animasi RecyclerView</string>
+    <string name="rename">Ubah nama</string>
+    <string name="select_all">Pilih Semua</string>
+    <string name="settings">Pengaturan</string>
+    <string name="share">Bagikan</string>
+    <string name="show_breadcrumb">Tampilkan Breadcrumb</string>
+    <string name="show_hidden_files">Tampilkan file tersembunyi</string>
+    <string name="sort_date">Tanggal diubah</string>
+    <string name="sort_name">Nama</string>
+    <string name="sort_size">Ukuran</string>
+    <string name="system">Sistem</string>
+    <string name="theme">Tema</string>
+    <style name="AppTheme" parent="Base.AppTheme"/>
+    <style name="Base.AppTheme" parent="Theme.Material3Expressive.DynamicColors.DayNight.NoActionBar">
+  </style>
+    <style name="CustomBottomDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:windowAnimationStyle">@style/DialogSlideAnimation</item>
+    </style>
+    <style name="DialogSlideAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_out</item>
+    </style>
+</resources>

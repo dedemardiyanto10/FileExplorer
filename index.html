@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FileExplorer - Advanced Android File Manager</title>
-    <!-- Google Fonts: Plus Jakarta Sans (Gaya Material 3 Modern) -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Material Symbols Outlined -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     
@@ -15,12 +15,13 @@
             --md-sys-color-on-primary: #ffffff;
             --md-sys-color-primary-container: #d1e4ff;
             --md-sys-color-on-primary-container: #001d36;
-            --md-sys-color-surface: #fdfcff;
+            --md-sys-color-surface: #f8f9fc;
             --md-sys-color-on-surface: #1a1c1e;
-            --md-sys-color-surface-container: #f0f4f8;
-            --md-sys-color-surface-container-high: #e2e8ee;
+            --md-sys-color-surface-container: #ffffff;
+            --md-sys-color-surface-container-high: #edf1f7;
             --md-sys-color-outline: #72777f;
-            --md-sys-color-outline-variant: #c2c7cf;
+            --md-sys-color-outline-variant: #e1e4ed;
+            --shadow-elevation: 0 10px 30px -10px rgba(0, 97, 164, 0.12);
         }
 
         @media (prefers-color-scheme: dark) {
@@ -29,12 +30,13 @@
                 --md-sys-color-on-primary: #00325b;
                 --md-sys-color-primary-container: #004a7d;
                 --md-sys-color-on-primary-container: #d1e4ff;
-                --md-sys-color-surface: #121316;
+                --md-sys-color-surface: #0f1115;
                 --md-sys-color-on-surface: #e2e2e6;
-                --md-sys-color-surface-container: #1e2024;
-                --md-sys-color-surface-container-high: #282a2e;
+                --md-sys-color-surface-container: #17191d;
+                --md-sys-color-surface-container-high: #22252a;
                 --md-sys-color-outline: #8c9199;
-                --md-sys-color-outline-variant: #42474e;
+                --md-sys-color-outline-variant: #2d3138;
+                --shadow-elevation: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
             }
         }
 
@@ -49,71 +51,124 @@
             background-color: var(--md-sys-color-surface);
             color: var(--md-sys-color-on-surface);
             line-height: 1.6;
-            padding: 24px 16px;
+            padding: 32px 16px;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .container {
             width: 100%;
-            max-width: 600px;
+            max-width: 560px;
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 20px;
+            animation: fadeInScale 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Header / App Info Card */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Hero Card dengan Efek Elevasi & Gradasi Halus */
         .hero-card {
             background-color: var(--md-sys-color-surface-container);
-            border-radius: 28px;
-            padding: 32px 24px;
+            border-radius: 32px;
+            padding: 36px 24px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 18px;
             border: 1px solid var(--md-sys-color-outline-variant);
+            box-shadow: var(--shadow-elevation);
+            position: relative;
+            overflow: hidden;
         }
 
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--md-sys-color-primary), var(--md-sys-color-primary-container));
+        }
+
+        /* Ikon Animasi Berdenyut Halus */
         .app-icon {
-            width: 88px;
-            height: 88px;
-            background-color: var(--md-sys-color-primary-container);
-            color: var(--md-sys-color-on-primary-container);
-            border-radius: 24px;
+            width: 96px;
+            height: 96px;
+            background: linear-gradient(135deg, var(--md-sys-color-primary-container), var(--md-sys-color-surface-container-high));
+            color: var(--md-sys-color-primary);
+            border-radius: 28px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 48px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            animation: floatIcon 4s ease-in-out infinite;
+        }
+
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
         }
 
         .app-title {
-            font-size: 28px;
-            font-weight: 700;
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
             color: var(--md-sys-color-on-surface);
         }
 
         .app-version {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
             background-color: var(--md-sys-color-primary-container);
             color: var(--md-sys-color-on-primary-container);
-            font-size: 13px;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .app-version span {
+            width: 6px;
+            height: 6px;
+            background-color: var(--md-sys-color-primary);
+            border-radius: 50%;
+            animation: pulseDot 2s infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
         }
 
         .app-desc {
             font-size: 15px;
             color: var(--md-sys-color-outline);
-            max-width: 440px;
+            max-width: 420px;
+            line-height: 1.5;
         }
 
-        /* Download Button (MD3 Filled Button) */
+        /* Tombol Download Interaktif (Ripple Effect & Glow) */
         .download-btn {
+            position: relative;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -121,30 +176,47 @@
             background-color: var(--md-sys-color-primary);
             color: var(--md-sys-color-on-primary);
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
-            padding: 16px 32px;
+            padding: 18px 36px;
             border-radius: 100px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 20px rgba(0, 97, 164, 0.25);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             width: 100%;
             max-width: 320px;
-            margin-top: 8px;
+            margin-top: 6px;
+            overflow: hidden;
         }
 
         .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 28px rgba(0, 97, 164, 0.35);
         }
 
-        /* Features Section */
+        .download-btn:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        /* Section Title */
         .section-title {
             font-size: 18px;
             font-weight: 700;
-            margin-top: 8px;
-            padding-left: 4px;
+            margin-top: 12px;
+            padding-left: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            background-color: var(--md-sys-color-primary);
+            border-radius: 4px;
+        }
+
+        /* Features Grid dengan Animasi Hover */
         .features-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -153,29 +225,42 @@
 
         .feature-card {
             background-color: var(--md-sys-color-surface-container);
-            border-radius: 20px;
+            border-radius: 24px;
             padding: 20px;
             display: flex;
             align-items: flex-start;
             gap: 16px;
             border: 1px solid var(--md-sys-color-outline-variant);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--md-sys-color-primary);
+            box-shadow: var(--shadow-elevation);
         }
 
         .feature-icon-box {
             background-color: var(--md-sys-color-surface-container-high);
             color: var(--md-sys-color-primary);
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon-box {
+            transform: scale(1.1) rotate(5deg);
+            background-color: var(--md-sys-color-primary-container);
         }
 
         .feature-content h3 {
-            font-size: 15px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 700;
             margin-bottom: 4px;
             color: var(--md-sys-color-on-surface);
         }
@@ -183,6 +268,7 @@
         .feature-content p {
             font-size: 13px;
             color: var(--md-sys-color-outline);
+            line-height: 1.5;
         }
 
         /* Footer */
@@ -190,7 +276,7 @@
             text-align: center;
             font-size: 13px;
             color: var(--md-sys-color-outline);
-            margin-top: 24px;
+            margin-top: 20px;
             padding-bottom: 12px;
         }
 
@@ -198,6 +284,12 @@
             color: var(--md-sys-color-primary);
             text-decoration: none;
             font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        footer a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -207,17 +299,19 @@
         <!-- Hero Card -->
         <div class="hero-card">
             <div class="app-icon">
-                <span class="material-symbols-outlined" style="font-size: 44px;">folder_open</span>
+                <span class="material-symbols-outlined" style="font-size: 48px;">folder_open</span>
             </div>
             <div>
                 <h1 class="app-title">FileExplorer</h1>
-                <span class="app-version">v1.0.0 Stable</span>
+                <div style="margin-top: 8px;">
+                    <span class="app-version"><span></span> v1.0.0 Stable</span>
+                </div>
             </div>
             <p class="app-desc">
                 Aplikasi manajemen file Android modern dengan analitik penyimpanan mendalam, ekstraksi arsip lengkap, dan antarmuka Material Design 3 Expressive.
             </p>
             
-            <!-- Tombol Download (Arahkan ke link Github Releases APK kamu) -->
+            <!-- Tombol Download -->
             <a href="https://github.com/dedemardiyanto10/FileExplorer/releases/download/V1.0.0/app-releasev1.0.0.apk" class="download-btn">
                 <span class="material-symbols-outlined">download</span>
                 Download APK (Release)
